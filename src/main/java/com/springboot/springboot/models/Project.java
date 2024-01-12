@@ -4,21 +4,21 @@ import java.io.Serializable;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Project")
+@Table(name = "project")
 public class Project implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ProjectId")
+    @Column(name = "projectId")
     private Long projectId;
 
-    @Column(name = "ProjectName", length = 100)
+    @Column(name = "projectName", length = 100)
     private String projectName;
 
-    @Column(name = "ProjectLink", length = 255)
+    @Column(name = "projectLink", length = 255)
     private String projectLink;
 
-    @Column(name = "ProjectDescription", columnDefinition = "TEXT")
+    @Column(name = "projectDescription", columnDefinition = "TEXT")
     private String projectDescription;
     
     public Project() {

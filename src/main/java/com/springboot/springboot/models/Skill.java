@@ -4,18 +4,18 @@ import java.io.Serializable;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Skill")
+@Table(name = "skill")
 public class Skill implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "SkillId")
+    @Column(name = "skillId")
     private Long skillId;
 
-    @Column(name = "Category", length = 50)
+    @Column(name = "category", length = 50)
     private String category;
 
-    @Column(name = "SkillName", length = 50)
+    @Column(name = "skillName", length = 50)
     private String skillName;
 
     public Skill() {

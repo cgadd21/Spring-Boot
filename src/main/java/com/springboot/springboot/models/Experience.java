@@ -5,35 +5,35 @@ import java.util.Date;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Experience")
+@Table(name = "experience")
 public class Experience implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ExperienceId")
+    @Column(name = "experienceId")
     private Long experienceId;
 
-    @Column(name = "JobTitle", length = 100)
+    @Column(name = "jobTitle", length = 100)
     private String jobTitle;
 
-    @Column(name = "CompanyName", length = 100)
+    @Column(name = "companyName", length = 100)
     private String companyName;
 
-    @Column(name = "EmploymentType", length = 50)
+    @Column(name = "employmentType", length = 50)
     private String employmentType;
 
-    @Column(name = "StartDate")
+    @Column(name = "startDate")
     @Temporal(TemporalType.DATE)
     private Date startDate;
 
-    @Column(name = "EndDate")
+    @Column(name = "endDate")
     @Temporal(TemporalType.DATE)
     private Date endDate;
 
-    @Column(name = "Description", columnDefinition = "TEXT")
+    @Column(name = "description", columnDefinition = "TEXT")
     private String description;
 
-    @Column(name = "Link", length = 255)
+    @Column(name = "link", length = 255)
     private String link;
 
     public Experience() {
